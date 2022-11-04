@@ -126,23 +126,29 @@ main{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* FOOTER */
 
 footer{
     background-color: rgb(40,40,40);
     height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer section{
+    width: calc(100% / 3 - 10px);
+    height: 80%;
+}
+
+#footer-left{
+    background-color: red;
+}
+
+#footer-center{
+    background-color: green;
+}
+
+#footer-right{
+    background-color: violet;
 }
 
