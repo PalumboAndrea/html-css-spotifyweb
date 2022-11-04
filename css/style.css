@@ -58,6 +58,11 @@ span{
 .icons-bottom{
     flex-direction: column;
     align-items: center;
+    margin: 10px 15px;
+}
+
+.icons-bottom hr{
+    display: none;
 }
 
 #logo i{
@@ -69,6 +74,11 @@ header i{
     color: white;
     font-size: 1.2rem;
     margin-bottom: 10px;
+}
+
+.icons-bottom .fa-download{
+    font-size: 0.8rem;
+    color: grey;
 }
 
 /* MAIN */
@@ -156,13 +166,10 @@ main{
     font-size: 3rem;
 }
 
-.card div:hover:after{
+.card div:hover + .play{
+
     opacity: 50%;
 }
-
-
-
-
 
 .card h3{
     color: white;
@@ -314,90 +321,172 @@ footer hr{
 
 /* HEADER */
 
-header{
-    width: 250px;
+    header{
+        width: 250px;
+    }
+
+    header i{
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .menu-icons{
+        align-items: flex-start;
+    }
+
+    #logo{
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+
+    #logo i{
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .menu-icons span{
+        display: block;
+        margin-left: 5px;
+    }
+
+    #logo span{
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .pippo{
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .pippo i,
+    #create-playlist i
+    {
+        margin: 0;
+    }
+
+    .pippo span{
+        color: grey;
+        font-size: 0.7rem;
+    }
+
+    #playlist{
+        display: inline;
+        margin-top: 10px;
+    }
+
+    #playlist h3{
+        text-transform: uppercase;
+        color: white;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    #create-playlist{
+        align-items: center;
+    }
+
+    #playlist span,
+    #playlist p,
+    .icons-bottom span
+    {
+        color: grey;
+        font-size: 0.7rem;
+    }
+
+    #playlist p{
+        margin-top: 15px;
+    }
+
+    .icons-bottom{
+        flex-direction: column;
+        align-items: center;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .icons-bottom hr{
+        display: block;
+        width: 100%;
+        background-color: grey;
+        height: 1px;
+        border: none;
+    }
+
+    .icons-bottom i{
+        margin-bottom: 0;
+    }
+
+    .icons-bottom div{
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .icons-bottom span{
+        display: block;
+        margin-left: 5px;
+    }
+
+    #user{
+        color: white;
+        font-weight: bold;
+    }
+
+
+
+    /* FOOTER */
+
+    #footer-left,
+    #footer-right{
+        width: 150px;
+    }
+
+    #footer-center{
+        width: 300px;
+    }
+
 }
 
-.menu-icons{
-    align-items: flex-start;
+@media screen and (min-width: 768px) {
+
+
+ /* PARTE MAIN CON LE ICONE */
+
+    #upper-menu{
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .cards{
+        justify-content: flex-start;
+        margin: 30px 0;
+    }
+
+    .card{
+        width: calc(100% / 4 - 16px);
+        margin: 10px 8px;
+    }
+
 }
 
-#logo{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
 
-#logo i{
-    font-size: 2rem;
-    margin: 0;
-}
 
-span{
-    display: block;
-    margin-left: 5px;
-}
+@media screen and (min-width: 992px) {
 
-#logo span{
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
+ /* PARTE MAIN CON LE ICONE */
 
-.pippo{
-    align-items: center;
-    margin-bottom: 15px;
-}
 
-.pippo i,
-#create-playlist i
-{
-    font-size: 1.5rem;
-    margin: 0;
-}
+    #upper-menu{
+        margin: 0 auto;
+        justify-content: center;
+    }
 
-.pippo span{
-    color: grey;
-    font-size: 0.7rem;
-}
 
-#playlist{
-    display: inline;
-    margin-top: 10px;
-}
-
-#playlist h3{
-    text-transform: uppercase;
-    color: white;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-}
-
-#create-playlist{
-    align-items: center;
-}
-
-#playlist span,
-#playlist p
-{
-    color: grey;
-    font-size: 0.7rem;
-}
-
-#playlist p{
-    margin-top: 15px;
-}
-
-.icons-bottom{
-    flex-direction: column;
-    align-items: center;
-}
-
-header i{
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
+    .card{
+        width: calc(100% / 6 - 16px);
+    }
 
 }
