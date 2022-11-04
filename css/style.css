@@ -138,14 +138,35 @@ main{
     text-align: center;
 }
 
+.card div{
+    position: relative;
+}
+
 .card img{
     width: 100%;
-    margin-bottom: 10px;
 }
+
+.play{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+}
+
+.card div:hover:after{
+    opacity: 50%;
+}
+
+
+
+
 
 .card h3{
     color: white;
-    margin-bottom: 5px;
+    margin: 10px 0 5px 0;
 }
 
 .icons p{
@@ -248,14 +269,18 @@ footer hr{
     border: none;
 }
 
+#timing .lines{
+    width: 80%;
+}
+
 #past{
-    width: 30px;
+    width: 30%;
     background-color: rgb(193,193,193);
     margin-left: 5px;
 }
 
 #future{
-    width: 70px;
+    width: 70%;
     background-color: grey;
     margin-right: 5px;
 }
@@ -280,34 +305,6 @@ footer hr{
     width: 50px;
     background-color: grey;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* **********************************************************
     S PART
@@ -397,7 +394,7 @@ span{
     align-items: center;
 }
 
-i{
+header i{
     color: white;
     font-size: 2rem;
     margin-bottom: 10px;
