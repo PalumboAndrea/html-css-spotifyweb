@@ -11,7 +11,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    min-width: 530px;
+    min-width: 500px;
 }
 
 .flex{
@@ -39,6 +39,7 @@ header{
     height: calc(100vh - 100px);
     flex-direction: column;
     justify-content: space-between;
+    overflow: auto;
 }
 
 .menu-icons{
@@ -118,6 +119,7 @@ main{
 
 #upgrade button:hover{
     transform: scale(1.1);
+    transition-duration: 200ms;
 }
 
 #upgrade button a{
@@ -204,7 +206,8 @@ main{
     display: block;
 }
 
-.card h3{
+.card h3 a{
+    display: inline-block;
     color: white;
     margin: 10px 0 5px 0;
 }
@@ -271,13 +274,13 @@ footer section{
     justify-content: space-between;
 }
 
-#favourite-folder i{
+#favourite-folder a{
     color: grey;
-    display: block;
     font-size: 1rem;
+    margin-left: 5px;
 }
 
-#favourite-folder i:hover{
+#favourite-folder a:hover{
     color: white;
 }
 
@@ -289,16 +292,16 @@ footer section{
     margin: auto;
 }
 
-#play-buttons a i{
+#play-buttons a{
     color: white;
     font-size: 1.2rem;
 }
 
-#play-buttons a:nth-child(3) i{
+#play-buttons a:nth-child(3){
     font-size: 1.6rem;
 }
 
-#play-buttons a i:hover{
+#play-buttons a:hover{
     transform: scale(1.2);
 }
 
@@ -374,7 +377,7 @@ footer hr{
     align-items: center;
 }
 
-#footer-right i{
+#footer-right>a{
     color: white;
     font-size: 0.8rem;
     margin-right: 5px;
@@ -434,7 +437,7 @@ footer hr{
 
     #logo i{
         font-size: 2rem;
-        margin: 0;
+        margin: 0 5px;
     }
 
     .menu-icons span,
@@ -470,7 +473,11 @@ footer hr{
         font-size: 0.7rem;
     }
 
-    header a:hover{
+    header .pippo:hover i,
+    header .pippo:hover a,
+    .icons-bottom div:first-child:hover .fa-download,
+    .icons-bottom div:first-child:hover a
+    {
         color: white;
     }
 
