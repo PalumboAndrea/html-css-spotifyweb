@@ -36,7 +36,7 @@ a{
 header{
     background-color:rgb(0,0,0);
     width: 50px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
@@ -97,7 +97,8 @@ header i{
 main{
     background-color: rgb(20,25,34);
     flex-grow: 1;
-    height: calc(100vh - 100px);
+    width: calc(100% - 50px);
+    height: calc(100vh - 80px);
     overflow-y: scroll;
 }
 
@@ -188,6 +189,10 @@ main{
     width: 100%;
 }
 
+.cards:last-child img{
+    border-radius: 50%;
+}
+
 .play{
     display: none;
     position: absolute;
@@ -206,6 +211,12 @@ main{
     display: block;
 }
 
+/* .card h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
 .card h3 a{
     display: inline-block;
     color: white;
@@ -221,7 +232,7 @@ main{
 
 footer{
     background-color: rgb(40,40,40);
-    height: 100px;
+    height: 80px;
     justify-content: space-between;
     align-items: center;
 }
@@ -230,6 +241,14 @@ footer section{
     width: calc(100% / 3 - 10px);
     height: 70%;
     margin: 0 10px;
+}
+
+.grey{
+    color: grey;
+}
+
+.grey:hover{
+    color: white;
 }
 
 #footer-center{
@@ -293,16 +312,19 @@ footer section{
 }
 
 #play-buttons a{
-    color: white;
     font-size: 1.2rem;
+}
+
+#play-buttons .fa-play-circle{
+    color: white;
+}
+
+#play-buttons .fa-play-circle:hover{
+    transform: scale(1.2);
 }
 
 #play-buttons a:nth-child(3){
     font-size: 1.6rem;
-}
-
-#play-buttons a:hover{
-    transform: scale(1.2);
 }
 
 #timing{
@@ -378,7 +400,6 @@ footer hr{
 }
 
 #footer-right>a{
-    color: white;
     font-size: 0.8rem;
     margin-right: 5px;
 }
@@ -406,6 +427,37 @@ footer hr{
     background-color: rgb(173,255,46);
 }
 
+.hover-upper-text{
+    display: none;
+    position: absolute;
+    top: -350%;
+    transform: translate(-40%);
+    padding: 10px 10px;
+    font-size: 0.6rem;
+    background-color: rgb(30, 30, 30);
+    border-radius: 5px;
+    white-space: nowrap;
+    text-transform: none;
+}
+
+#play-buttons .hover-upper-text{
+    top: -200%;
+}
+
+#play .hover-upper-text{
+    top: -140%;
+    transform: translate(-20%);
+}
+
+.grey{
+    position: relative;
+}
+
+.grey:hover .hover-upper-text{
+    display: block;
+}
+
+
 
 /* **********************************************************
     S PART
@@ -416,7 +468,7 @@ footer hr{
 /* HEADER */
 
     header{
-        width: 250px;
+        width: 200px;
     }
 
     header i{
@@ -540,6 +592,13 @@ footer hr{
         font-weight: bold;
     }
 
+    /* MAIN */
+
+    main{
+       
+        width: calc(100% - 200px);
+        
+    }
 
     /* FOOTER */
 
