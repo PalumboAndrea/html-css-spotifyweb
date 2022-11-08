@@ -178,6 +178,7 @@ main{
 .card{
     width: calc(100% / 2 - 8px);
     margin-bottom: 10px;
+    margin-right: 8px;
     padding: 8px;
     text-align: center;
     background-color: rgb(19, 19, 19);
@@ -237,14 +238,16 @@ main{
     text-overflow: ellipsis;
 }
 
-.card h3 a{
-    display: inline-block;
+.card h3{
     color: white;
     margin: 10px 0 5px 0;
 }
 
 .icons p{
     color: grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -657,8 +660,7 @@ footer hr{
     }
 
     .card{
-        width: calc(100% / 4 - 16px);
-        margin: 10px 8px;
+        width: calc(100% / 4 - 8px);
     }
 
 /* FOOTER */
@@ -706,7 +708,7 @@ footer hr{
 
 
     .card{
-        width: calc(100% / 6 - 16px);
+        width: calc(100% / 6 - 8px);
     }
 
     /* FOOTER */
