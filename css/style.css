@@ -178,7 +178,10 @@ main{
 .card{
     width: calc(100% / 2 - 8px);
     margin-bottom: 10px;
+    padding: 8px;
     text-align: center;
+    background-color: rgb(19, 19, 19);
+    border-radius: 10px;
 }
 
 .card figure{
@@ -187,6 +190,7 @@ main{
 
 .card img{
     width: 100%;
+    border-radius: 10px;
 }
 
 .cards:last-child img{
@@ -196,26 +200,42 @@ main{
 .play{
     display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3rem;
+    border-radius: 50%;
+    padding: 12px;
+    padding-left: 16px;
+    width: 3.2rem;
+    background-color: rgb(36, 211, 78);
+    text-align: center;
+    bottom: 6%;
+    right: 5%;
+    color: black;
+    font-size: 1.6rem;
+    animation-duration: 400ms;
 }
 
-.card figure:hover img{
-    opacity: 50%;
-}
-
-.card figure:hover .play{
+.card:hover .play{
     display: block;
+    animation-name: play;
 }
 
-/* .card h3{
+.card:hover{
+    background-color: rgb(49, 46, 49);
+}
+
+.play:hover{
+    transform: scale(1.03);
+}
+
+@keyframes play {
+    0%   { transform: translateY(10px); opacity: 10%; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.card h3{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-} */
+}
 
 .card h3 a{
     display: inline-block;
@@ -508,12 +528,12 @@ footer hr{
         font-weight: 700;
     }
 
-    .pippo{
+    .header-icon{
         align-items: center;
         margin-bottom: 15px;
     }
 
-    .pippo i,
+    .header-icon i,
     #create-playlist i
     {
         width: 28px;
@@ -525,8 +545,8 @@ footer hr{
         font-size: 0.7rem;
     }
 
-    header .pippo:hover i,
-    header .pippo:hover a,
+    header .header-icon:hover i,
+    header .header-icon:hover a,
     .icons-bottom div:first-child:hover .fa-download,
     .icons-bottom div:first-child:hover a
     {
@@ -554,7 +574,11 @@ footer hr{
         font-size: 0.7rem;
     }
 
-    #playlist>a{
+    #playlist-scrollbar{
+        overflow-y: auto;
+    }
+
+    #playlist-scrollbar>a{
         margin-top: 15px;
     }
 
@@ -595,9 +619,7 @@ footer hr{
     /* MAIN */
 
     main{
-       
         width: calc(100% - 200px);
-        
     }
 
     /* FOOTER */
